@@ -6,9 +6,8 @@ using namespace std;
 int solution(int n, vector<int> cores) {
     int answer = 0;
     int low = -1;
-    int high = 2000000;
+    int high = 10000*50000+1;
     int mid = 0;
-
     while(low+1<high)
     {
         mid = (low+high)/2;
@@ -29,9 +28,7 @@ int solution(int n, vector<int> cores) {
     }
     int count = cores.size();
     for(int i = 0;i<cores.size();i++)
-    {
         count += low/cores[i];
-    }
     
     
     for(int i = 0;i<cores.size();i++)
